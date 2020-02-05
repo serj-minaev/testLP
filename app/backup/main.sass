@@ -1,0 +1,88 @@
+@import vars
+@import fonts
+@import libs
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-size: 14px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: 'Roboto', sans-serif
+	overflow-x: hidden
+	color: $text
+
+a
+	color: $text
+	transition: .3s
+	text-decoration: none
+	font-size: 14px
+	&:hover
+		color: $accent
+		text-decoration: none
+
+header
+	position: relative
+	height: 100px
+	padding: 20px 0 0 0
+	z-index: 1010
+#main
+	position: relative
+.container
+	max-width: 1170px
+	width: 100%
+	padding: 0 15px
+nav
+	display: flex
+	height: 100%
+	align-items: center
+nav a
+	padding: 0 25px
+	text-transform: uppercase
+	color: #263a41
+	font-weight: 500
+	line-height: 20px
+.logo a
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	font-family: 'Playfair Display'
+	font-size: 30px
+	line-height: 30px
+	&:hover
+		color: $text
+	& img
+		max-width: 49px
+#main
+	display: flex
+	align-items: center
+.main-img img
+	width: 40%
+	position: absolute
+	right: -30px
+	top: -130px
+.main-content
+	padding: 60px 25px
+	& h1
+		color: $accent
+
+#flower1
+	position: absolute
+	left: -100px
+	top: 15vh
+	z-index: -1
+	max-width: 250px
